@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomFirstInfoView" customModule="ProductionPractice" customModuleProvider="target">
+            <connections>
+                <outlet property="licenseLabel" destination="4PA-Rh-RsW" id="tpt-T1-1TA"/>
+                <outlet property="statsLabel" destination="pxp-Jw-G8p" id="UUc-nn-wMQ"/>
+                <outlet property="urlLabel" destination="8ej-gr-jle" id="7cC-d2-0bH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="144"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="gdN-2R-Lzy">
+                    <rect key="frame" x="17" y="0.0" width="359" height="144"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ej-gr-jle" customClass="URLView" customModule="ProductionPractice" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="359" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="ieP-vc-1Cy"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4PA-Rh-RsW" customClass="LicenseView" customModule="ProductionPractice" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="359" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="A3i-8X-YfS"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxp-Jw-G8p" customClass="StatsView" customModule="ProductionPractice" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="120" width="359" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="Tm7-c7-0au"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gdN-2R-Lzy" secondAttribute="bottom" id="Hl1-dq-5ff"/>
+                <constraint firstAttribute="trailing" secondItem="gdN-2R-Lzy" secondAttribute="trailing" constant="17" id="Nmh-x4-k25"/>
+                <constraint firstItem="gdN-2R-Lzy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="QjT-vU-Urc"/>
+                <constraint firstItem="gdN-2R-Lzy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="w9z-R1-OZr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+    </objects>
+</document>

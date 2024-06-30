@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (5.8.1)
+  - MarkdownView (1.9.1)
+  - NVActivityIndicatorView (5.2.0):
+    - NVActivityIndicatorView/Base (= 5.2.0)
+  - NVActivityIndicatorView/Base (5.2.0)
+  - ReachabilitySwift (5.2.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - MarkdownView
+  - NVActivityIndicatorView
+  - ReachabilitySwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - MarkdownView
+    - NVActivityIndicatorView
+    - ReachabilitySwift
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  MarkdownView: 22249778219cc22901f1454e8355298dd0bda7f0
+  NVActivityIndicatorView: fe52a6a68664c2df8991d7d9e3d86d8d19453c53
+  ReachabilitySwift: 7f151ff156cea1481a8411701195ac6a984f4979
+
+PODFILE CHECKSUM: 126cfc0dfc159321b17bc6dad425b1b31bc8e0ca
+
+COCOAPODS: 1.14.2

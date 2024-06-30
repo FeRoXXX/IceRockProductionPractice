@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthView" customModule="ProductionPractice" customModuleProvider="target">
+            <connections>
+                <outlet property="signInButton" destination="Pbh-WO-VsU" id="50B-YC-UZs"/>
+                <outlet property="tokenInputTextField" destination="eg2-te-eqx" id="57u-pg-UFC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Iw3-ct-HlN">
+                    <rect key="frame" x="148.66666666666666" y="115" width="96" height="96"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eg2-te-eqx" customClass="CustomTokenInput" customModule="ProductionPractice" customModuleProvider="target">
+                    <rect key="frame" x="16" y="267" width="361" height="68"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="cVw-WE-ekJ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbh-WO-VsU" customClass="CustomInputButton" customModule="ProductionPractice" customModuleProvider="target">
+                    <rect key="frame" x="16" y="770" width="361" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="4ey-dD-Fu3"/>
+                        <constraint firstAttribute="width" constant="361" id="MQf-NH-gMJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <keyboardLayoutGuide key="keyboard" id="yz0-iv-Q5e"/>
+            <color key="backgroundColor" red="0.054901964960000001" green="0.066666662690000003" blue="0.086274504660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="Pbh-WO-VsU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Bxe-WB-N9D"/>
+                <constraint firstItem="eg2-te-eqx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="CGy-K8-b8U"/>
+                <constraint firstItem="eg2-te-eqx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="EGs-La-69a"/>
+                <constraint firstItem="Iw3-ct-HlN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Fsy-Bi-Wia"/>
+                <constraint firstItem="yz0-iv-Q5e" firstAttribute="top" secondItem="Pbh-WO-VsU" secondAttribute="bottom" id="aIc-Nu-ipb"/>
+                <constraint firstItem="Pbh-WO-VsU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hjm-On-0jX"/>
+                <constraint firstItem="eg2-te-eqx" firstAttribute="top" secondItem="Iw3-ct-HlN" secondAttribute="bottom" constant="56" id="mu3-Wd-JcA"/>
+                <constraint firstItem="Iw3-ct-HlN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="56" id="w7j-5M-rEr"/>
+            </constraints>
+            <point key="canvasLocation" x="81" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AppIcon" width="96" height="96"/>
+    </resources>
+</document>

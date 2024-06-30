@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoriesListView" customModule="ProductionPractice" customModuleProvider="target">
+            <connections>
+                <outlet property="repositoriesTableView" destination="9Ou-1w-Qgp" id="EAA-S5-75e"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ou-1w-Qgp">
+                    <rect key="frame" x="0.0" y="59" width="393" height="659"/>
+                    <color key="backgroundColor" red="0.054901964960000001" green="0.066666662690000003" blue="0.086274504660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="separatorColor" red="0.13333332540000001" green="0.14901961389999999" blue="0.1725490093" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="RepositoriesView"/>
+            <constraints>
+                <constraint firstItem="9Ou-1w-Qgp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EVH-aH-NmQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9Ou-1w-Qgp" secondAttribute="bottom" constant="100" id="dtn-6i-Sxz"/>
+                <constraint firstItem="9Ou-1w-Qgp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="gLM-sw-4G0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Ou-1w-Qgp" secondAttribute="trailing" id="r6A-Qe-uua"/>
+            </constraints>
+            <point key="canvasLocation" x="110.68702290076335" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
