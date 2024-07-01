@@ -20,4 +20,5 @@ protocol IRepositoryDetailInfoViewController: AnyObject {
     func startLoadingReadMe()
     func stopLoadingReadMe()
     func setupTitle(_ text: String)
+    func goToURL(_ url: URL)
 }

@@ -27,13 +27,18 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="68" id="cVw-WE-ekJ"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbh-WO-VsU" customClass="CustomInputButton" customModule="ProductionPractice" customModuleProvider="target">
                     <rect key="frame" x="16" y="770" width="361" height="48"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="4ey-dD-Fu3"/>
-                        <constraint firstAttribute="width" constant="361" id="MQf-NH-gMJ"/>
                     </constraints>
                 </view>
             </subviews>

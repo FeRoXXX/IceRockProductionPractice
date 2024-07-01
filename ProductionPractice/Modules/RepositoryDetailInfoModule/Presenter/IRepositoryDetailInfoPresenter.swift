@@ -13,4 +13,5 @@ protocol IRepositoryDetailInfoPresenter {
     func logOutButtonAction()
     func globalAlertButtonTapped()
     func readmeAlertButtonTapped()
+    func urlTapped(_ url: String?)
 }

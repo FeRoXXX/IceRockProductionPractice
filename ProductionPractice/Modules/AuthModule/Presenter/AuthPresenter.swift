@@ -23,16 +23,18 @@ extension AuthPresenter: IAuthPresenter {
     func viewLoaded(ui: IAuthViewController) {
         self.ui = ui
         ui.startLoadingIndicator()
-        dataManager.checkReEntry { [unowned self] result in
+        dataManager.checkReEntry { [weak self] result in
             switch result {
             case .success(let success):
-                self.repositoryData = AccountModel(repositoryURL: success.urlRepositories)
+                self?.repositoryData = AccountModel(repositoryURL: success.urlRepositories)
                 ui.successAuth()
                 DispatchQueue.main.async {
                     ui.stopLoadingIndicator()
                 }
-            default:
-                break
+            case .failure(_):
+                DispatchQueue.main.async {
+                    ui.showAlert(MockData.Errors.alertMessage.rawValue.localized())
+                }
             }
         }
         DispatchQueue.main.async {
@@ -61,7 +63,7 @@ extension AuthPresenter: IAuthPresenter {
             self.checkToken(token)
         } failure: {
             DispatchQueue.main.async {
-                self.ui?.showAlert(MockData.Errors.alertMessage.rawValue)
+                self.ui?.showAlert(MockData.Errors.alertMessage.rawValue.localized())
             }
         }
     }
@@ -78,17 +80,15 @@ private extension AuthPresenter {
         }
         ui?.startLoadingIndicator()
         DispatchQueue.main.async { [weak self] in
-            guard let self else { return }
-            dataManager.signIn(token) { [weak self] result in
-                guard let self else { return }
+            self?.dataManager.signIn(token) { [weak self] result in
                 switch result {
                 case .success(let success):
-                    repositoryData = AccountModel(repositoryURL: success.urlRepositories)
-                    ui?.successAuth()
+                    self?.repositoryData = AccountModel(repositoryURL: success.urlRepositories)
+                    self?.ui?.successAuth()
                 case .failure(_):
-                    ui?.showError(MockData.Errors.invalidToken.rawValue)
+                    self?.ui?.showError(MockData.Errors.invalidToken.rawValue.localized())
                 }
-                ui?.stopLoadingIndicator()
+                self?.ui?.stopLoadingIndicator()
             }
         }
     }

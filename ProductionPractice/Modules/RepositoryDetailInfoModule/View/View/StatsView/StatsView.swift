@@ -12,10 +12,14 @@ final class StatsView: UIView {
     @IBOutlet private weak var starsLabel: UILabel!
     @IBOutlet private weak var forksLabel: UILabel!
     @IBOutlet private weak var watchersLabel: UILabel!
+    @IBOutlet private weak var starsTitleLabel: UILabel!
+    @IBOutlet private weak var forksTitleLabel: UILabel!
+    @IBOutlet private weak var watchersTitleLabel: UILabel!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
+        setupMockText()
     }
     
     func setupStats(_ stats: RepositoryStatsModel) {
@@ -35,5 +39,11 @@ private extension StatsView {
     func loadViewFromXib() -> UIView {
         guard let bundle = Bundle.main.loadNibNamed("StatsView", owner: self)?.first as? UIView else { return UIView() }
         return bundle
+    }
+    
+    func setupMockText() {
+        starsTitleLabel.text = MockData.StatsViewText.stars.rawValue.localized()
+        forksTitleLabel.text = MockData.StatsViewText.forks.rawValue.localized()
+        watchersTitleLabel.text = MockData.StatsViewText.watchers.rawValue.localized()
     }
 }

@@ -10,10 +10,10 @@ import Foundation
 final class AuthDataRepository {
     
     private let appRepository: AppRepository
-    private let keyValueStorage: KeyValueStorage = KeyValueStorage()
+    private let keyValueStorage: IKeyValueStorage = KeyValueStorage()
     
-    init(AppRepository: AppRepository) {
-        self.appRepository = AppRepository
+    init(appRepository: AppRepository) {
+        self.appRepository = appRepository
     }
 }
 

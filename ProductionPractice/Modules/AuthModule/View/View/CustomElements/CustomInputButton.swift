@@ -18,6 +18,7 @@ final class CustomInputButton: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
+        setupMockText()
         setupButton()
     }
     
@@ -47,6 +48,10 @@ private extension CustomInputButton {
     func setupButton() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(buttonClick))
         addGestureRecognizer(gesture)
+    }
+    
+    func setupMockText() {
+        text.text = MockData.CustomInputButtonText.signIn.rawValue.localized()
     }
     
     @objc func buttonClick() {

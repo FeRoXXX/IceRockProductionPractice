@@ -9,6 +9,7 @@ import Foundation
 
 protocol IKeyValueStorage {
     func saveAuthToken(token: String)
+    func getAuthToken() -> String?
     func deleteAuthToken()
 }
 

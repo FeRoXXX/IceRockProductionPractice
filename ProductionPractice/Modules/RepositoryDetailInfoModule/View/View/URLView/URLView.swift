@@ -10,10 +10,12 @@ import UIKit
 final class URLView: UIView {
     
     @IBOutlet private weak var urlLabel: UILabel!
+    var urlTapped: ((String?) -> Void)?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
+        setupURLGesture()
     }
     
     func setupURL(_ url: String) {
@@ -23,6 +25,11 @@ final class URLView: UIView {
 
 private extension URLView {
     
+    func setupURLGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(textTapped))
+        self.addGestureRecognizer(gesture)
+    }
+    
     func setupView() {
         let subview = loadViewFromXib()
         self.addSubview(subview)
@@ -31,5 +38,9 @@ private extension URLView {
     func loadViewFromXib() -> UIView {
         guard let bundle = Bundle.main.loadNibNamed("URLView", owner: self)?.first as? UIView else { return UIView() }
         return bundle
+    }
+    
+    @objc func textTapped() {
+        urlTapped?(urlLabel.text)
     }
 }

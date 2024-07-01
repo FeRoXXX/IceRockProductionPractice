@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LicenseView" customModule="ProductionPractice" customModuleProvider="target">
             <connections>
                 <outlet property="licenseLabel" destination="B35-II-j3W" id="63h-kc-sMX"/>
+                <outlet property="licenseTitleLabel" destination="kjV-if-Aim" id="WX3-TV-Br1"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

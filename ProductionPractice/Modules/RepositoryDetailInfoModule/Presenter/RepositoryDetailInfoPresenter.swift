@@ -49,6 +49,12 @@ extension RepositoryDetailInfoPresenter: IRepositoryDetailInfoPresenter {
         dataManager.logOut()
         ui?.goToAuth()
     }
+    
+    func urlTapped(_ url: String?) {
+        guard let urlString = url,
+            let url = URL(string: urlString) else { return }
+        ui?.goToURL(url)
+    }
 }
 
 private extension RepositoryDetailInfoPresenter {
@@ -106,7 +112,9 @@ private extension RepositoryDetailInfoPresenter {
     
     func fetchReadme() {
         guard let requestData = self.requestData else { return }
-        ui?.startLoadingReadMe()
+        DispatchQueue.main.async {
+            self.ui?.startLoadingReadMe()
+        }
         self.dataManager.getRepositoryReadme(requestData) { result in
             DispatchQueue.main.async {
                 self.ui?.stopLoadingReadMe()

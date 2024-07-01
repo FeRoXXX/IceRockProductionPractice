@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  ProductionPractice
+
+  Created by Александр Федоткин on 01.07.2024.
+  
+*/
+
+"Connection error" = "Ошибка соединения";
+"Load error" = "Ошибка загрузки";
+"Something Error" = "Другая ошибка";
+"Empty" = "Пусто";
+"Empty Readme file" = "Readme файл не найден";
+"Check your Internet connection" = "Проверьте интернет соединение";
+"Check your something" = "Непредвиденная ошибка";
+"No repositories at the moment" = "Нет доступных репозиториев";
+"Readme doesn't exist try again later" = "Файл Readme не найден, попробуйте позже";
+"Invalid token" = "Неверный ключ";
+"Error data / error code information for developers" = "Данные об ошибке / информация о коде ошибки для разработчиков";
+"Error" = "Ошибка";
+"Ok" = "Хорошо";
+"Retry" = "Повторить попытку";
+"Refresh" = "Обновить";
+"Personal access token" = "Личный токен";
+"Sign In" = "Войти";
+"License" = "Лицензия";
+"No License" = "Не найдена";
+"stars" = "звезды";
+"forks" = "вилки";
+"watchers" = "просматривают";
+"Repositories" = "Репозитории";
+"No README.md" = "README.md не найден";
+

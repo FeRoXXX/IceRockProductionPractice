@@ -23,6 +23,7 @@ final class AlertView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
+        setupMockText()
         setupButtonTarget()
     }
 }
@@ -34,7 +35,7 @@ extension AlertView {
         case .connectionError, .loadError, .somethingError, .emptyError:
             imageView.image = UIImage(named: ImageNames.AlertsImage.getImageName(by: error))
             textLabel.textColor = Colors.AlertsColor.getAlertsColor(by: error)
-            textLabel.text = error.rawValue
+            textLabel.text = error.rawValue.localized()
             descriptionLabel.text = MockData.Alerts.getDescription(by: error)
             actionButton.setTitle(MockData.AlertButtonText.getText(by: error), for: .normal)
         case .emptyReadme:
@@ -79,6 +80,10 @@ private extension AlertView {
     
     func setupButtonTarget() {
         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    func setupMockText() {
+        emptyReadmeLabel.text = MockData.AlertViewMockText.noReadme.rawValue.localized()
     }
     
     @objc func actionButtonTapped() {

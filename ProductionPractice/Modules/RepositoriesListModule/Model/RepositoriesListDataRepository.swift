@@ -8,18 +8,18 @@
 import Foundation
 
 final class RepositoriesListDataRepository {
-    private let AppRepository: AppRepository
+    private let appRepository: AppRepository
     private var allRepositoriesInfo: [Repo] = []
     
-    init(AppRepository: AppRepository) {
-        self.AppRepository = AppRepository
+    init(appRepository: AppRepository) {
+        self.appRepository = appRepository
     }
 }
 
 extension RepositoriesListDataRepository: IRepositoriesListDataRepository {
     
     func getRepositories(url: String, completion: @escaping (Result<Array<Repo>, Error>) -> Void) {
-        AppRepository.getRepositories(url: url) { data, error in
+        appRepository.getRepositories(url: url) { data, error in
             if let error {
                 completion(.failure(error))
             }
@@ -31,7 +31,7 @@ extension RepositoriesListDataRepository: IRepositoriesListDataRepository {
     }
     
     func logOut() {
-        AppRepository.logOut()
+        appRepository.logOut()
     }
     
     func getRepositoriesFullInfo() -> [Repo] {

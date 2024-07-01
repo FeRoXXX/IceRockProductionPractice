@@ -8,7 +8,7 @@
 final class RepositoriesListAssembly {
     static func build() -> (RepositoriesListViewController, RepositoriesListReceivedDataStore) {
         let dataSource = RepositoriesListTableViewDataSource()
-        let dataManager = RepositoriesListDataRepository(AppRepository: AppRepository())
+        let dataManager = RepositoriesListDataRepository(appRepository: AppRepository())
         let presenter = RepositoriesListPresenter(dataSource: dataSource, dataManager: dataManager)
         let router = RepositoriesListRouter(dataStore: presenter)
         let viewController = RepositoriesListViewController(presenter: presenter, router: router)

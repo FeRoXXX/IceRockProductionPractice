@@ -10,8 +10,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatsView" customModule="ProductionPractice" customModuleProvider="target">
             <connections>
                 <outlet property="forksLabel" destination="q7o-jQ-Qvc" id="qvd-5w-1LA"/>
+                <outlet property="forksTitleLabel" destination="gyq-Co-3B5" id="fE0-59-c3O"/>
                 <outlet property="starsLabel" destination="tNI-O4-4Zy" id="9dz-pU-Hho"/>
+                <outlet property="starsTitleLabel" destination="EUL-cD-YbP" id="X2y-MZ-Kee"/>
                 <outlet property="watchersLabel" destination="TW4-IP-Ash" id="Ryh-a2-Zwa"/>
+                <outlet property="watchersTitleLabel" destination="VTO-Vz-nMK" id="dql-Tr-ekj"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

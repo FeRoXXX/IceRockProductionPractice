@@ -9,6 +9,12 @@ import UIKit
 
 enum Colors {
     
+    enum CustomTokenInput {
+        static let borderColorSelected = #colorLiteral(red: 0.3449212611, green: 0.6503628492, blue: 0.9986084104, alpha: 1)
+        static let borderColorError = #colorLiteral(red: 0.7943204045, green: 0.3077791929, blue: 0.3079556227, alpha: 1)
+        static let placeholderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
+    }
+    
     enum AlertsColor {
         static let fatalError = #colorLiteral(red: 0.8417338729, green: 0.3985319436, blue: 0.3816541433, alpha: 1)
         static let warning = #colorLiteral(red: 0.4101545811, green: 0.7174265981, blue: 1, alpha: 1)

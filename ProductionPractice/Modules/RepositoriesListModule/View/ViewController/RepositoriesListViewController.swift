@@ -43,15 +43,15 @@ final class RepositoriesListViewController: UIViewController {
 private extension RepositoriesListViewController {
     
     func setupAlertButton() {
-        alertView.buttonTapped = { [unowned self] in
-            presenter.refreshButtonTapped()
+        alertView.buttonTapped = { [weak self] in
+            self?.presenter.refreshButtonTapped()
         }
     }
     
     func setupNavigationBar() {
         navigationController?.setNavigationBarHidden(true, animated: true)
-        navigationBar.quitButtonTriggered = { [unowned self] in
-            presenter.logOutButtonAction()
+        navigationBar.quitButtonTriggered = { [weak self] in
+            self?.presenter.logOutButtonAction()
         }
     }
     

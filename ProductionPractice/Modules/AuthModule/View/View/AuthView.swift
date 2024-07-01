@@ -21,26 +21,6 @@ final class AuthView: UIView {
     }
 }
 
-private extension AuthView {
-    
-    func setupView() {
-        let subview = loadViewFromXib()
-        self.addSubview(subview)
-    }
-    
-    func loadViewFromXib() -> UIView {
-        guard let bundle = Bundle.main.loadNibNamed("AuthView", owner: self)?.first as? UIView else { return UIView() }
-        return bundle
-    }
-    
-    func setupButton() {
-        signInButton.buttonClicked = { [weak self] in
-            guard let self else { return }
-            self.signInButtonClicked?(tokenInputTextField.textField.text)
-        }
-    }
-}
-
 extension AuthView {
     
     func startActivityIndicator() {
@@ -52,7 +32,7 @@ extension AuthView {
     }
     
     func setupDelegate(_ delegate: UITextFieldDelegate) {
-        tokenInputTextField.textField.delegate = delegate
+        tokenInputTextField.setupDelegate(delegate)
     }
     
     func useSelectColor() {
@@ -69,5 +49,25 @@ extension AuthView {
     
     func showError(_ text: String) {
         tokenInputTextField.useErrorLabel(text)
+    }
+}
+
+private extension AuthView {
+    
+    func setupView() {
+        let subview = loadViewFromXib()
+        self.addSubview(subview)
+    }
+    
+    func loadViewFromXib() -> UIView {
+        guard let bundle = Bundle.main.loadNibNamed("AuthView", owner: self)?.first as? UIView else { return UIView() }
+        return bundle
+    }
+    
+    func setupButton() {
+        signInButton.buttonClicked = { [weak self] in
+            guard let self else { return }
+            self.signInButtonClicked?(tokenInputTextField.getText())
+        }
     }
 }

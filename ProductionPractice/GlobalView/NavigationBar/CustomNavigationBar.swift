@@ -19,6 +19,7 @@ final class CustomNavigationBar: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupView()
+        setupMockText()
         setupButtonsAction()
     }
     
@@ -47,6 +48,10 @@ private extension CustomNavigationBar {
     func setupButtonsAction() {
         quitButton.addTarget(self, action: #selector(quitButtonClicked), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backButtonClicked), for: .touchUpInside)
+    }
+    
+    func setupMockText() {
+        repositoryName.text = MockData.NavigationBarText.repositoriesName.rawValue.localized()
     }
     
     @objc func quitButtonClicked() {

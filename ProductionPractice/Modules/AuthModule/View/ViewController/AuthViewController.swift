@@ -108,8 +108,8 @@ extension AuthViewController: IAuthViewController {
     }
     
     func showAlert(_ alertText: String) {
-        let alert = UIAlertController(title: MockData.Errors.Error.rawValue, message: alertText, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: MockData.Errors.Ok.rawValue, style: .default))
+        let alert = UIAlertController(title: MockData.Errors.Error.rawValue.localized(), message: alertText, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: MockData.Errors.Ok.rawValue.localized(), style: .default))
         self.present(alert, animated: true)
     }
 }

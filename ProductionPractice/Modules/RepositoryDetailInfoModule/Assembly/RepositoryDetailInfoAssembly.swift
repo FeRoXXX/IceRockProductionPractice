@@ -9,7 +9,7 @@ import Foundation
 
 final class RepositoryDetailInfoAssembly {
     static func build() -> (RepositoryDetailInfoViewController, RepositoryDetailInfoDataStore) {
-        let dataManager = RepositoryDetailInfoDataRepository(AppRepository: AppRepository())
+        let dataManager = RepositoryDetailInfoDataRepository(appRepository: AppRepository())
         let presenter = RepositoryDetailInfoPresenter(dataManager: dataManager)
         let router = RepositoryDetailInfoRouter()
         let viewController = RepositoryDetailInfoViewController(presenter: presenter, router: router)

@@ -72,14 +72,11 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tWy-VO-Pxb" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWy-VO-Pxb" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
                     <rect key="frame" x="168.66666666666666" y="398" width="56" height="56"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="56" id="0lm-bN-gNI"/>
-                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="56" id="1hQ-pB-53B"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="36h-5i-UBS"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="3oc-Qi-6Mw"/>
+                        <constraint firstAttribute="width" secondItem="tWy-VO-Pxb" secondAttribute="height" multiplier="1:1" id="taY-Rf-jb0"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="color">
@@ -97,6 +94,7 @@
                 <constraint firstItem="sKP-pR-BMZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="84" id="LRN-HK-iX2"/>
                 <constraint firstItem="sKP-pR-BMZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RHW-v3-nOy"/>
                 <constraint firstItem="tWy-VO-Pxb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XnB-p5-KKb"/>
+                <constraint firstItem="tWy-VO-Pxb" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="14:213" id="ezY-lx-yqi"/>
                 <constraint firstItem="tWy-VO-Pxb" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lZm-Mh-vRx"/>
                 <constraint firstItem="mqj-YU-SFq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ngy-qc-3aS"/>
                 <constraint firstItem="mqj-YU-SFq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="orJ-Wj-bsb"/>

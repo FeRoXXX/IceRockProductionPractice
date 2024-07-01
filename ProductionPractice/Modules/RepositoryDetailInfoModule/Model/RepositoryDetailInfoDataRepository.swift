@@ -9,17 +9,17 @@ import Foundation
 
 final class RepositoryDetailInfoDataRepository {
     
-    private let AppRepository: AppRepository
+    private let appRepository: AppRepository
     
-    init(AppRepository: AppRepository) {
-        self.AppRepository = AppRepository
+    init(appRepository: AppRepository) {
+        self.appRepository = appRepository
     }
 }
 
 extension RepositoryDetailInfoDataRepository: IRepositoryDetailInfoDataRepository {
     
     func getRepositoryFirstInfo(repoId: String, completion: @escaping(Result<RepoDetails, Error>) -> Void) {
-        AppRepository.getRepository(repoId: repoId) { data, error in
+        appRepository.getRepository(repoId: repoId) { data, error in
             if let error {
                 completion(.failure(error))
             }
@@ -30,7 +30,7 @@ extension RepositoryDetailInfoDataRepository: IRepositoryDetailInfoDataRepositor
     }
     
     func getRepositoryReadme(_ data: RequestDataModel, completion: @escaping(Result<String, Error>) -> Void) {
-        AppRepository.getRepositoryReadme(ownerName: data.ownerName,
+        appRepository.getRepositoryReadme(ownerName: data.ownerName,
                                           repositoryName: data.repositoryName,
                                           branchName: data.branch) { data, error in
             if let error {
@@ -43,6 +43,6 @@ extension RepositoryDetailInfoDataRepository: IRepositoryDetailInfoDataRepositor
     }
     
     func logOut() {
-        AppRepository.logOut()
+        appRepository.logOut()
     }
 }

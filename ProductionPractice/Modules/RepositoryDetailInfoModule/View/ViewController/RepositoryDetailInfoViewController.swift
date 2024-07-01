@@ -25,6 +25,7 @@ final class RepositoryDetailInfoViewController: UIViewController {
         setupNavigationBarButtons()
         setupConstraints()
         setupAlertsButton()
+        setupURLAction()
         
         router.setupRouter(self)
         presenter.viewLoaded(self)
@@ -46,12 +47,12 @@ private extension RepositoryDetailInfoViewController {
     
     func setupNavigationBarButtons() {
         navigationBar.showBackButton()
-        navigationBar.backButtonTriggered = { [unowned self] in
-            presenter.backButtonAction()
+        navigationBar.backButtonTriggered = { [weak self] in
+            self?.presenter.backButtonAction()
         }
         
-        navigationBar.quitButtonTriggered = { [unowned self] in
-            presenter.logOutButtonAction()
+        navigationBar.quitButtonTriggered = { [weak self] in
+            self?.presenter.logOutButtonAction()
         }
     }
     
@@ -69,12 +70,18 @@ private extension RepositoryDetailInfoViewController {
     }
     
     func setupAlertsButton() {
-        globalAlertView.buttonTapped = { [unowned self] in
-            presenter.globalAlertButtonTapped()
+        globalAlertView.buttonTapped = { [weak self] in
+            self?.presenter.globalAlertButtonTapped()
         }
         
-        readmeAlertView.buttonTapped = { [unowned self] in
-            presenter.readmeAlertButtonTapped()
+        readmeAlertView.buttonTapped = { [weak self] in
+            self?.presenter.readmeAlertButtonTapped()
+        }
+    }
+    
+    func setupURLAction() {
+        firstInfoView.urlLinkTapped = { [weak self] result in
+            self?.presenter.urlTapped(result)
         }
     }
 }
@@ -149,5 +156,9 @@ extension RepositoryDetailInfoViewController: IRepositoryDetailInfoViewControlle
     
     func setupTitle(_ text: String) {
         navigationBar.setupRepositoryName(text)
+    }
+    
+    func goToURL(_ url: URL) {
+        UIApplication.shared.open(url)
     }
 }
